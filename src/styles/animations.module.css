@@ -1,0 +1,39 @@
+.typing {
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid transparent;
+    width: 24ch;
+    overflow: hidden;
+    animation: typing 3s steps(23),
+    blink .5s infinite step-end alternate;
+    animation-iteration-count: 1, 6;
+}
+.typing2 {
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid transparent;
+    width: 0;
+    overflow: hidden;
+    animation: typing2 3s steps(25) alternate,
+    blink .5s infinite step-end alternate;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+}
+
+@keyframes typing {
+    from { width: 0;}
+    to {width: 100%;}
+}
+
+@keyframes typing2 {
+    from { width: 0;}
+    to {width: 25ch;}
+}
+
+@keyframes blink {
+    0% { border-color: transparent;}
+    50% {border-color: black;}
+    100% {border-color: transparent;}
+}
