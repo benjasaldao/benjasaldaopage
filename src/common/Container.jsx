@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './../styles/common/Container.module.css';
 
 const Container = ({ children }) => {
-  return <section className={styles.container}>{children}</section>;
+  return <div className={styles.container}>{children}</div>;
 };
 
 export default Container;

@@ -2,7 +2,8 @@ import { Fragment, useContext } from 'react';
 import Link from 'next/link';
 import AppContext from '../context/AppContext';
 import { Dialog, Transition } from '@headlessui/react';
-import { XIcon } from '@heroicons/react/outline';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faX } from '@fortawesome/free-solid-svg-icons';
 
 export default function MenuMobile() {
   const { state, toggleMenu } = useContext(AppContext);
@@ -34,7 +35,7 @@ export default function MenuMobile() {
                         <div className="ml-3 flex h-7 items-center">
                           <button type="button" className="-m-2 p-2 text-gray-400 hover:text-gray-500" onClick={() => toggleMenu(false)}>
                             <span className="sr-only">Close panel</span>
-                            <XIcon className="h-6 w-6" aria-hidden="true" />
+                            <FontAwesomeIcon className="h-6 w-6" icon={faX} />
                           </button>
                         </div>
                       </div>
@@ -45,15 +46,15 @@ export default function MenuMobile() {
                             <Link href="/">Inicio</Link>
                           </div>
                           <div className="p-1">
-                            <Link href="/">Sobre Mi</Link>
+                            <Link href="/about-me">Sobre Mi</Link>
                           </div>
                           <div className="p-1">
-                            <Link href="/">Servicios</Link>
+                            <Link href="/services">Servicios</Link>
                           </div>
                           <div className="mt-8">
                             <p className="text-black ml-2">Quitate cualquier duda!</p>
                             <div className="text-white text-center rounded-md bg-indigo-500 px-5 py-1 b cursor-pointer hover:bg-indigo-600">
-                              <Link href="/">Contacto</Link>
+                              <Link href="/contact">Contacto</Link>
                             </div>
                           </div>
                         </div>

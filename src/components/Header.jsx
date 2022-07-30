@@ -5,20 +5,25 @@ import logo from './../../public/logoBenjaSaldao.png';
 
 const Header = () => {
   return (
-    <header className="sm:sticky top-0 bg-white">
+    <header className="sm:sticky top-0 bg-white z-50">
       <div className="flex items-center justify-between lg:justify-around sm:border-b sm:border-gray-200">
-        <div className="w-1/4 sm:w-1/12 lg:w-1/20">
-          <Image src={logo} alt="logo" layout="responsive" className="" />
+        <div className="w-1/4 sm:w-1/12 lg:w-1/20 cursor-pointer">
+          <a href="/">
+            <Image src={logo} alt="logo" layout="responsive" className="" />
+          </a>
         </div>
         <nav className="hidden text-xl sm:flex items-center mr-7">
           <div className="mr-3 text-gray-500 hover:text-black">
             <Link href="/">Inicio</Link>
           </div>
           <div className="mr-3 text-gray-500 hover:text-black">
-            <Link href="/">Sobre Mi</Link>
+            <Link href="/about-me">Sobre Mi</Link>
+          </div>
+          <div className="p-1 mr-3 w-min hover:text-black">
+            <Link href="/services">Servicios</Link>
           </div>
           <div className="mr-3 text-white rounded-md bg-indigo-500 px-5 py-1 b cursor-pointer hover:bg-indigo-600">
-            <Link href="/">Contacto</Link>
+            <Link href="/contact">Contacto</Link>
           </div>
         </nav>
       </div>
