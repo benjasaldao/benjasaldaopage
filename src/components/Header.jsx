@@ -8,9 +8,9 @@ const Header = () => {
     <header className="sm:sticky top-0 bg-white z-50">
       <div className="flex items-center justify-between lg:justify-around sm:border-b sm:border-gray-200">
         <div className="w-1/4 sm:w-1/12 lg:w-1/20 cursor-pointer">
-          <a href="/">
+          <Link passHref href="/">
             <Image src={logo} alt="logo" layout="responsive" className="" />
-          </a>
+          </Link>
         </div>
         <nav className="hidden text-xl sm:flex items-center mr-7">
           <div className="mr-3 text-gray-500 hover:text-black">
