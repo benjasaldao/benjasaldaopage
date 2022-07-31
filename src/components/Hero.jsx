@@ -14,7 +14,7 @@ const Hero = () => {
           <Link passHref href="/about-me">
             <button className="px-7 hover:bg-indigo-600 py-1 rounded-md text-white bg-indigo-500 m-4 md:mr-16">Sobre mi</button>
           </Link>
-          <Link passHref href="/contact" >
+          <Link passHref href="/contact">
             <button className="px-7 hover:bg-indigo-600 py-1 rounded-md text-white bg-indigo-500 m-4 md:mr-16">Contacto</button>
           </Link>
         </div>
