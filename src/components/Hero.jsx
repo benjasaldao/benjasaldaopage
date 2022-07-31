@@ -15,7 +15,7 @@ const Hero = () => {
             <button className="px-7 hover:bg-indigo-600 py-1 rounded-md text-white bg-indigo-500 m-4 md:mr-16">Sobre mi</button>
           </Link>
           <Link passHref href="/contact">
-            <button className="px-7 hover:bg-indigo-600 py-1 rounded-md text-white bg-indigo-500 m-4 md:mr-16">Contacto</button>
+            <button className="px-7 hover:bg-indigo-200 py-1 rounded-md text-black border-2 border-indigo-500 m-4 md:mr-16">Contacto</button>
           </Link>
         </div>
       </div>
