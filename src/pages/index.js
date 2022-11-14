@@ -21,7 +21,7 @@ export default function Home() {
               <button className="text-center w-32 hover:bg-indigo-600 py-1 rounded-md text-white bg-indigo-500 m-4">Leer mas</button>
             </Link>
           </div>
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center self-end">
             <Image className="" alt="desarrollador" src={desarrollador} />
           </div>
         </section>
@@ -34,7 +34,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="flex items-center justify-center">
-            <Image className="" alt="desarrollador" src={development} />
+            <Image alt="desarrollador" src={development} />
           </div>
         </section>
       </Container>

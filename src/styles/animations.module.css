@@ -5,7 +5,7 @@
     border-right: 4px solid transparent;
     width: 24ch;
     overflow: hidden;
-    animation: typing 3s steps(23),
+    animation: typing 3s steps(24),
     blink .5s infinite step-end alternate;
     animation-iteration-count: 1, 6;
 }
@@ -16,20 +16,20 @@
     border-right: 4px solid transparent;
     width: 0;
     overflow: hidden;
-    animation: typing2 3s steps(25) alternate,
+    animation: typing2 3s steps(24) alternate,
     blink .5s infinite step-end alternate;
-    animation-iteration-count: infinite;
     animation-delay: 3s;
+    animation-fill-mode: forwards
 }
 
 @keyframes typing {
     from { width: 0;}
-    to {width: 100%;}
+    to {width: 24ch;}
 }
 
 @keyframes typing2 {
     from { width: 0;}
-    to {width: 25ch;}
+    to {width: 24ch;}
 }
 
 @keyframes blink {
