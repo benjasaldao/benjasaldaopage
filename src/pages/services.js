@@ -23,6 +23,10 @@ export default function Services() {
           <h2 className="font-bold mb-4 text-2xl">Creacion de sitios web</h2>
           <p className="text-gray-500">
             La creacion de sitios web incluye desde una web presentacional basica hasta una tienda vitual completa con un panel de administracion para gestionarla, cargar productos y ver pedidos.
+            Puedes ver algunos de mis trabajos en mi pagina de{' '}
+            <a className="underline" href="https://github.com/benjasaldao">
+              GitHub
+            </a>
           </p>
         </div>
         <div className="mt-8">

@@ -7,6 +7,7 @@ import hablando from './../../public/hablando.png';
 
 const Contact = () => {
   const formRef = useRef(null);
+  // const [res, setRes] = useState({});
   const { alert, setAlert, toggleAlert } = useAlert();
 
   const handleSubmit = (event) => {
@@ -28,7 +29,30 @@ const Contact = () => {
         autoClose: true,
       });
     } else {
-      // Send request
+      const options = {
+        method: 'POST',
+        headers: {
+          // eslint-disable-next-line prettier/prettier
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      };
+      fetch('/api/send', options)
+        .then((res) => {
+          return res.json();
+        })
+        .then(({ mailSent }) => {
+          if (mailSent) {
+            setAlert({
+              active: true,
+              message: 'Gracias por tu mensaje! pronto me pondre en contacto contigo',
+              type: 'success',
+              autoClose: true,
+            });
+            formData.delete('name');
+          }
+        })
+        .catch((err) => console.log(err));
     }
   };
 
@@ -49,6 +73,7 @@ const Contact = () => {
           <div className="md:flex justify-between">
             <div className="flex flex-col mx-6">
               <h4 className="text-4xl font-bold mb-8 -mt-10 bg-white">Ponte en contacto </h4>
+              <Alert alert={alert} handleClose={toggleAlert} />
               <label htmlFor="name" className="text-gray-500">
                 Nombre: <br />
                 <input name="name" id="name" type="text" className="w-full text-black p-2 border-gray-500 border rounded-md focus:outline-none focus:ring focus:ring-indigo-500" />
@@ -67,7 +92,6 @@ const Contact = () => {
               <Image className="" alt="desarrollador" src={hablando} />
             </div>
           </div>
-          <Alert alert={alert} handleClose={toggleAlert} />
         </form>
       </Container>
     </>
