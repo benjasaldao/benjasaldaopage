@@ -16,7 +16,7 @@ const handler = nc()
           api: process.env.API_KEY,
         },
       });
-      res.json({ mailSent: true });
+      res.json({ mailSent: true, rta });
     } catch (err) {
       res.json(err);
     }
