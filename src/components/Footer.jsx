@@ -2,7 +2,7 @@ import React from 'react';
 import Container from '../common/Container';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
@@ -24,13 +24,15 @@ const Footer = () => {
             </button>
           </nav>
           <div className="mt-6 mr-8 ">
-            <h4>Mis redes sociales:</h4>
             <div className="flex">
-              <a href="https://github.com/benjasaldao" className="m-2">
+              <a href="https://github.com/benjasaldao" target="_blank" rel="noreferrer" className="m-2">
                 <FontAwesomeIcon icon={faGithub} className="h-8 w-8" />
               </a>
-              <a href="https://www.instagram.com/benjasaldano/" className="m-2">
+              <a href="https://www.instagram.com/benjasaldano/" target="_blank" rel="noreferrer" className="m-2">
                 <FontAwesomeIcon icon={faInstagram} className="h-8 w-8" />
+              </a>
+              <a href="https://www.linkedin.com/in/benjamin-salda%C3%B1o/" target="_blank" rel="noreferrer" className="m-2">
+                <FontAwesomeIcon icon={faLinkedin} className="h-8 w-8" />
               </a>
             </div>
           </div>

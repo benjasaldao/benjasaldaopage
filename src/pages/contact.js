@@ -7,7 +7,6 @@ import hablando from './../../public/hablando.png';
 
 const Contact = () => {
   const formRef = useRef(null);
-  // const [res, setRes] = useState({});
   const { alert, setAlert, toggleAlert } = useAlert();
 
   const handleSubmit = (event) => {
@@ -41,18 +40,24 @@ const Contact = () => {
         .then((res) => {
           return res.json();
         })
-        .then(({ mailSent }) => {
-          if (mailSent) {
+        .then((res) => {
+          if (res.mailSent) {
             setAlert({
               active: true,
               message: 'Gracias por tu mensaje! pronto me pondre en contacto contigo',
               type: 'success',
               autoClose: true,
             });
-            formData.delete('name');
           }
         })
-        .catch((err) => console.log(err));
+        .catch(() => {
+          setAlert({
+            active: true,
+            message: 'Parece que hubo un error inesperado! Intentalo de nuevo mas tarde o comunicate por mis redes sociales!',
+            type: 'error',
+            autoClose: true,
+          });
+        });
     }
   };
 

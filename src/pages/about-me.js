@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import Container from '../common/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCss3, faGithub, faHtml5, faInstagram, faJs, faNode, faReact } from '@fortawesome/free-brands-svg-icons';
+import { faCss3, faGithub, faHtml5, faInstagram, faJs, faNode, faReact, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import diploma from '../../public/diploma-escuela-javascript.png';
 
 const AboutMe = () => {
@@ -57,11 +57,14 @@ const AboutMe = () => {
         <h4 className="text-2xl font-bold my-8">Mis redes sociales:</h4>
         <p>Te dejo links a mis redes sociales por si queres conocerme mas de cerca!</p>
         <div className="flex">
-          <a href="https://github.com/benjasaldao" className="m-2">
+          <a href="https://github.com/benjasaldao" target="_blank" rel="noreferrer" className="m-2">
             <FontAwesomeIcon icon={faGithub} className="h-8 w-8" />
           </a>
-          <a href="https://www.instagram.com/benjasaldano/" className="m-2">
+          <a href="https://www.instagram.com/benjasaldano/" target="_blank" rel="noreferrer" className="m-2">
             <FontAwesomeIcon icon={faInstagram} className="h-8 w-8" />
+          </a>
+          <a href="https://www.linkedin.com/in/benjamin-salda%C3%B1o/" target="_blank" rel="noreferrer" className="m-2">
+            <FontAwesomeIcon icon={faLinkedin} className="h-8 w-8" />
           </a>
         </div>
       </div>

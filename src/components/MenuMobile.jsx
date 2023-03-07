@@ -42,15 +42,21 @@ export default function MenuMobile() {
 
                       <div className="mt-8 text-gray-500">
                         <div className="flow-root">
-                          <div className="p-1">
-                            <Link href="/">Inicio</Link>
-                          </div>
-                          <div className="p-1">
-                            <Link href="/about-me">Sobre Mi</Link>
-                          </div>
-                          <div className="p-1">
-                            <Link href="/services">Servicios</Link>
-                          </div>
+                          <Link href="/" passHref>
+                            <div onClick={toggleMenu} className="p-1 cursor-pointer">
+                              Inicio
+                            </div>
+                          </Link>
+                          <Link href="/about-me" passHref>
+                            <div onClick={toggleMenu} className="p-1 cursor-pointer">
+                              Sobre Mi
+                            </div>
+                          </Link>
+                          <Link href="/services" passHref>
+                            <div onClick={toggleMenu} className="p-1 cursor-pointer">
+                              Servicios
+                            </div>
+                          </Link>
                           <div className="mt-8">
                             <p className="text-black ml-2">Quitate cualquier duda!</p>
                             <div className="text-white text-center rounded-md bg-indigo-500 px-5 py-1 b cursor-pointer hover:bg-indigo-600">
