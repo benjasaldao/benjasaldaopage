@@ -7,6 +7,7 @@ const handler = nc().post(async (req, res) => {
   const { body } = req;
 
   try {
+    // eslint-disable-next-line no-unused-vars
     const rta = await axios.post(URL + '/send', body, {
       headers: {
         'Content-Type': 'application/json',

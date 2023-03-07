@@ -14,25 +14,33 @@ class MyDocument extends Document {
           <script
             dangerouslySetInnerHTML={{
               __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-
-            gtag('consent', 'default', {
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              //this defaults to denying
+              gtag('consent', 'default', {
                 'analytics_storage': 'denied'
-            });
+              });
 
-            gtag('js', new Date());
+              gtag('js', new Date());
 
-            if( consentimiento ) {
+              //este función es la que nos devuelve el valor de la cookie de preferencias
+              function getCookie() {
+                const value = "; " + document.cookie;
+                const parts = value.split("; CookieConsent=");
+                if (parts.length === 2) return parts.pop().split(';').shift();
+              }
+
+              //únicamente si el valor es true, se cargan los scripts de Google Analytics.
+              if(getCookie() === "true"){
                 gtag('consent', 'update', {
                 'analytics_storage': 'granted'
-                });
+              });
             }
 
-            gtag('config', '${process.env.GOOGLE_ANALYTICS}', {
-                page_path: window.location.pathname,
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+              page_path: window.location.pathname,
             });
-        `,
+          `,
             }}
           />
         </Head>
