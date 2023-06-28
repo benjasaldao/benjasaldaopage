@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-import Container from '../common/Container';
 import Image from 'next/image';
 import Alert from '../common/Alert';
 import useAlert from '../hooks/useAlert';
@@ -30,6 +29,8 @@ const Contact = () => {
         type: 'error',
         autoClose: true,
       });
+
+      setLoading(false);
     } else {
       const options = {
         method: 'POST',
@@ -79,32 +80,30 @@ const Contact = () => {
 
   return (
     <>
-      <Container>
-        <form ref={formRef} onSubmit={handleSubmit} className="border border-black rounded-md p-4 my-10">
-          <div className="md:flex justify-between">
-            <div className="flex flex-col mx-6">
-              <h4 className="text-4xl font-bold mb-8 -mt-10 bg-white">Ponte en contacto </h4>
-              <Alert alert={alert} handleClose={toggleAlert} />
-              <label htmlFor="name" className="text-gray-500">
-                Nombre: <br />
-                <input name="name" id="name" type="text" className="w-full text-black p-2 border-gray-500 border rounded-md focus:outline-none focus:ring focus:ring-indigo-500" />
-              </label>
-              <label htmlFor="email" className="text-gray-500">
-                Email: <br />
-                <input name="email" type="email" className="w-full text-black p-2 border-gray-500 border rounded-md focus:outline-none focus:ring focus:ring-indigo-500" />
-              </label>
-              <label htmlFor="message" className="text-gray-500">
-                Tu mensaje: <br />
-                <textarea name="message" type="text" className="w-full text-black p-2 border-gray-500 border rounded-md focus:outline-none focus:ring focus:ring-indigo-500" />
-              </label>
-              <button className="text-center w-32 hover:bg-indigo-600 py-1 rounded-md text-white bg-indigo-500 mt-4">{loading ? 'Enviando...' : 'Enviar'}</button>
-            </div>
-            <div className="flex items-center justify-center md:w-1/2">
-              <Image className="" alt="desarrollador" src={hablando} />
-            </div>
+      <form ref={formRef} onSubmit={handleSubmit} className="border border-black rounded-md p-4  my-24">
+        <h4 className="text-4xl font-bold mb-8 -mt-20 bg-white">Ponte en contacto </h4>
+        <div className="md:flex justify-evenly">
+          <div className="flex flex-col mx-6 py-14 md:w-1/3">
+            <label htmlFor="name" className="text-gray-500">
+              Nombre: <br />
+              <input name="name" id="name" type="text" className="w-full text-black p-2 border-gray-500 border rounded-md focus:outline-none focus:ring focus:ring-indigo-500" />
+            </label>
+            <label htmlFor="email" className="text-gray-500">
+              Email: <br />
+              <input name="email" type="email" className="w-full text-black p-2 border-gray-500 border rounded-md focus:outline-none focus:ring focus:ring-indigo-500" />
+            </label>
+            <label htmlFor="message" className="text-gray-500">
+              Tu mensaje: <br />
+              <textarea name="message" type="text" className="w-full text-black p-2 border-gray-500 border rounded-md focus:outline-none focus:ring focus:ring-indigo-500" />
+            </label>
+            <button className="text-center w-32 hover:bg-indigo-600 py-1 rounded-md text-white bg-indigo-500 my-4">{loading ? 'Enviando...' : 'Enviar'}</button>
           </div>
-        </form>
-      </Container>
+          <div className="flex items-center justify-center md:w-1/2">
+            <Image className="" alt="desarrollador" src={hablando} />
+          </div>
+        </div>
+        <Alert alert={alert} handleClose={toggleAlert} />
+      </form>
     </>
   );
 };

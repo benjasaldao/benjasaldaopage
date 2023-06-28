@@ -5,6 +5,7 @@ import CookieConsent from 'react-cookie-consent';
 import Layout from '../components/Layout';
 import AppContext from '../context/AppContext';
 import useInitialState from '../hooks/useInitialState';
+import '../styles/global.css';
 import './../styles/tailwind.css';
 import Link from 'next/link';
 
@@ -29,8 +30,9 @@ function MyApp({ Component, pageProps }) {
     <>
       <AppContext.Provider value={initialState}>
         <Head>
-          <title>BenjaSaldao.com</title>
+          <title>BenjaSaldao.com - Desarrollo web</title>
           <link rel="icon" href="/logoBenjaSaldao.ico" />
+          <meta name="description" content="Mi nombre es Benja Saldaño y soy desarrollador web" />
         </Head>
         <Layout>
           <Component {...pageProps} />

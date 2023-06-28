@@ -3,7 +3,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        celeste: '#00c4cc',
+        secondary: '#00c4cc',
+        primary: '#6366F1',
       },
       width: {
         '1/20': '5%',

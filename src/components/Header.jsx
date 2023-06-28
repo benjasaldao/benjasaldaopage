@@ -17,13 +17,13 @@ const Header = () => {
             <Link href="/">Inicio</Link>
           </div>
           <div className="mr-3 text-gray-500 hover:text-black">
-            <Link href="/about-me">Sobre Mi</Link>
+            <Link href="#about-me">Sobre Mi</Link>
           </div>
           <div className="mr-3 text-gray-500 hover:text-black">
-            <Link href="/services">Servicios</Link>
+            <Link href="#services">Servicios</Link>
           </div>
           <div className="mr-3 text-white rounded-md bg-indigo-500 px-5 py-1 b cursor-pointer hover:bg-indigo-600">
-            <Link href="/contact">Contacto</Link>
+            <Link href="#contact">Contacto</Link>
           </div>
         </nav>
       </div>
