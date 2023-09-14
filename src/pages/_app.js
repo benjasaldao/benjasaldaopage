@@ -1,13 +1,12 @@
 import Head from 'next/head';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import CookieConsent from 'react-cookie-consent';
 import Layout from '../components/Layout';
 import AppContext from '../context/AppContext';
 import useInitialState from '../hooks/useInitialState';
+import CookieConsent from '../components/CookieConsent';
 import '../styles/global.css';
 import './../styles/tailwind.css';
-import Link from 'next/link';
 
 function MyApp({ Component, pageProps }) {
   const initialState = useInitialState();
@@ -16,7 +15,7 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     const handleRouteChange = (url) => {
-      window.gtag('config', process.env.GOOGLE_ANALYTICS, {
+      window.gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
         page_path: url,
       });
     };
@@ -32,22 +31,11 @@ function MyApp({ Component, pageProps }) {
         <Head>
           <title>BenjaSaldao.com - Desarrollo web</title>
           <link rel="icon" href="/logoBenjaSaldao.ico" />
-          <meta name="description" content="Mi nombre es Benja Saldaño y soy desarrollador web" />
+          <meta name="description" content="Mi nombre es Benjamin Saldaño y soy desarrollador web" />
         </Head>
         <Layout>
           <Component {...pageProps} />
-          <CookieConsent
-            location="bottom"
-            buttonText="Estoy de acuerdo"
-            onAccept={() => location.reload()}
-            cookieName="CookieConsent"
-            expires={150}
-            enableDeclineButton="true"
-            declineButtonText="No quiero utilizar cookies"
-          >
-            Este sitio web utiliza cookies en busca de mejorar la experiencia de usuario
-            <Link href="/cookies">Política de Cookies</Link>.
-          </CookieConsent>
+          <CookieConsent />
         </Layout>
       </AppContext.Provider>
     </>
