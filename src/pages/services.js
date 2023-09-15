@@ -4,7 +4,7 @@ import Container from '../common/Container';
 export default function Services() {
   return (
     <>
-      <Container>
+      {/* <Container>
         <div className="relative">
           <div className="bg-indigo-500 w-64 h-24 z-0 bg-gradient-to-tr from-indigo-500 to-celeste"></div>
           <div className="bg-indigo-500 w-24 h-40 z-0"></div>
@@ -58,7 +58,7 @@ export default function Services() {
           <h2 className="font-bold my-4 text-2xl">Sitios web al alcance de tu bolsillo</h2>
           <p>Mis servicios son totalmente adaptables a tu presupuesto. Ponte en contacto conmigo y veamos que podemos hacer con tus ideas!</p>
         </div>
-      </Container>
+      </Container> */}
     </>
   );
 }

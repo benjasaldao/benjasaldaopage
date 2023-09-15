@@ -61,9 +61,8 @@ export default function MenuMobile() {
                           </Link>
                           <br />
                           <div className="mt-8">
-                            <p className="text-black ml-2">Quitate cualquier duda!</p>
                             <div className="text-white text-center rounded-md bg-indigo-500 px-5 py-1 b cursor-pointer hover:bg-indigo-600">
-                              <Link href="/contact">Contacto</Link>
+                              <Link href="/contact">Ponte en contacto</Link>
                             </div>
                           </div>
                         </div>

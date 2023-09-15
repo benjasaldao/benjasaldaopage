@@ -17,7 +17,7 @@ export default function Home() {
         <section id="about-me" className="mt-10 md:flex items-center justify-evenly">
           <div className="flex flex-col items-center md:max-w-4/10">
             <h4 className="text-4xl font-bold mb-8">Sobre Mi</h4>
-            <p className="text-gray-500 p-4">Hola de nuevo! Mi nombre es Benjamin Saldaño y soy desarrollador web. Tengo 22 años y soy de Buenos Aires, Argentina.</p>
+            <p className="text-gray-500 p-4">Mi nombre es Benjamin Saldaño y soy desarrollador web. Tengo 22 años y soy de Buenos Aires, Argentina.</p>
             <Link passHref href="/about-me">
               <button className="text-center w-32 hover:bg-indigo-600 py-1 rounded-md text-white bg-indigo-500 m-4">Leer mas</button>
             </Link>
