@@ -17,7 +17,7 @@ const Footer = () => {
               <Link href="/about-me">Sobre Mi</Link>
             </div>
             <div className="p-1 w-min hover:text-black">
-              <Link href="/services">Servicios</Link>
+              <Link href="/works">Trabajos</Link>
             </div>
             <button className="p-1 w-min hover:text-black">
               <Link href="/contact">Contacto</Link>

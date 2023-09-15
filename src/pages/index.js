@@ -31,9 +31,9 @@ export default function Home() {
             <Image alt="desarrollador" src={development} />
           </div>
           <div className="flex flex-col items-center md:max-w-4/10">
-            <h4 className="text-4xl font-bold mb-8">Mis servicios</h4>
-            <p className="text-gray-500 p-4">Creacion de Sitios web, tiendas virtuales, landing pages y todo lo necesario para llevar tu marca a la web!</p>
-            <Link passHref href="/services">
+            <h4 className="text-4xl font-bold mb-8">Mis trabajos</h4>
+            <p className="text-gray-500 p-4">Algunos de los trabajos que realice por mi cuenta.</p>
+            <Link passHref href="/works">
               <button className="text-center w-32 hover:bg-indigo-600 py-1 rounded-md text-white bg-indigo-500 m-4">Leer mas</button>
             </Link>
           </div>
