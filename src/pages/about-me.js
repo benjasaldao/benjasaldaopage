@@ -11,7 +11,7 @@ const AboutMe = () => {
       <h2 className="text-4xl font-bold mb-8">Sobre mi</h2>
       <div className="text-gray-500">
         <p>
-          Me llamo Benjamin Saldaño, soy de Buenos Aires, Argentina, tengo 22 años y soy desarrollador web. Empece haciendo un curso en el 2019 por mera curiosidad, ya que en ese momento estaba
+          Me llamo Benjamin Saldaño, soy de Buenos Aires, Argentina, tengo 24 años y soy desarrollador web. Empece haciendo un curso en el 2019 por mera curiosidad, ya que en ese momento estaba
           estudiando economia en la universidad de Buenos Aires. Luego, por la pandemia, deje la facultad pero segui con el curso.{' '}
         </p>
         <p>
