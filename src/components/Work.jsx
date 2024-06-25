@@ -9,7 +9,6 @@ const Work = ({ workData }) => {
         <h4 className="text-xl font-bold">{workData.title}</h4>
         <p>{workData.description}</p>
       </div>
-      
       <div>
         {workData.proyectUrl && (
           <a href={workData.proyectUrl} target="_blank" rel="noreferrer">

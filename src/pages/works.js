@@ -28,7 +28,8 @@ export default function Services() {
     },
     {
       title: 'Catalogo web',
-      description: 'Proyecto creado con C# utilizando .NET framework para el curso de C# nivel 3 de maxiprograma.com. En este proyecto utilice bootstrap, C# y SQL. La aplicacion maneja permisos y autenticacion.',
+      description:
+        'Proyecto creado con C# utilizando .NET framework para el curso de C# nivel 3 de maxiprograma.com. En este proyecto utilice bootstrap, C# y SQL. La aplicacion maneja permisos y autenticacion.',
       proyectUrl: 'http://tpfinalnivel3saldanobenjamin.somee.com/',
       codeUrl: 'https://github.com/benjasaldao/tp-final-nivel3-Saldano-Benjamin',
       image: '',
